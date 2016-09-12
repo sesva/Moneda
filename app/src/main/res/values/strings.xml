@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Monedas</string>
+    <string name="txt_guia1">Ingresa la cantidad a convetir</string>
+    <string name="txt_guia2">Selecciona tu moneda de origen</string>
+    <string name="txt_guia3">Selecciona la moneda destino a convertir</string>
+    <string name="ok">OK</string>
+    <string name="colombia_pesos">Colombia pesos</string>
+    <string name="usa_dolar">Usa Dolar</string>
+    <string name="chile_pesos">Chile Pesos</string>
+    <string name="brasil_pesos">Brasil Reales</string>
+    <string name="china_yuan">China Yuan</string>
+    <string name="japon_yen">Japon Yen</string>
+    <string name="mexico_pesos">Mexico Pesos</string>
+    <string name="euro">Euro</string>
+    <string name="convertir">Convertir</string>
+
+</resources>

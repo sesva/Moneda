@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="origen">7
+        <item>SELECCIONA TU MONEDA</item>
+        <item>COLOMBIA PESO</item>
+        <item>USA DOLAR</item>
+        <item>BRASIL REAL</item>
+        <item>CHILE PESO</item>
+        <item>CHINA YUAN</item>
+        <item>JAPON YEN</item>
+    </string-array>
+</resources>
