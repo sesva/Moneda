@@ -13,5 +13,6 @@
     <string name="mexico_pesos">Mexico Pesos</string>
     <string name="euro">Euro</string>
     <string name="convertir">Convertir</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>

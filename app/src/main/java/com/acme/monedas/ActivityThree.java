@@ -184,5 +184,21 @@ public class ActivityThree extends Activity {
                 sv.fullScroll(0);
             }
         });
+
+        Button btnMap = (Button) findViewById(R.id.btnVerMap);
+        btnMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Boolean cheked = cb_bra.isChecked() == true || cb_chi.isChecked() == true
+                        || cb_col.isChecked() == true || cb_china.isChecked() == true
+                        || cb_euro.isChecked() == true || cb_jap.isChecked() == true
+                        || cb_mex.isChecked() == true || cb_usa.isChecked() == true;
+                if(cheked){
+                    Intent i = new Intent(ActivityThree.this, MapsActivity.class);
+                    startActivity(i);
+                }
+
+            }
+        });
     }
 }
