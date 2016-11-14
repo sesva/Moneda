@@ -8,9 +8,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 /**
  * Created by Apolo on 31/08/2016.
@@ -182,6 +186,51 @@ public class ActivityThree extends Activity {
 
                 ScrollView sv = (ScrollView)findViewById(R.id.ScrollView01);
                 sv.fullScroll(0);
+            }
+        });
+
+        Button btnMap = (Button) findViewById(R.id.btnVerMap);
+        btnMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LinearLayout rootLayout = (LinearLayout) findViewById(R.id.ly);
+//                ArrayList<CheckBox> editTextList = new ArrayList<CheckBox>();
+//                String[] arrMoney = new String[8];
+                ArrayList<String> arrMoney = new ArrayList<String>();
+                Integer contArr = 0;
+                for(int i = 0; i < rootLayout.getChildCount(); i++) {
+                    LinearLayout layoutInner = (LinearLayout) rootLayout.getChildAt(i);
+                    for (Integer x = 0; x < layoutInner.getChildCount(); x++) {
+//                        Log.i("checkInner",x.toString());
+                        if (layoutInner.getChildAt(x) instanceof CheckBox) {
+                            CheckBox ch = (CheckBox) layoutInner.getChildAt(x);
+                            if (ch.isChecked()) {
+                                arrMoney.add(ch.getText().toString());
+//                                Log.i("Money",arrMoney.get(contArr));
+//                                //Log.e("Cont",contArr.toString());
+//
+                                contArr++;
+//                                editTextList.add( (CheckBox) layoutInner.getChildAt(x));
+//                                Log.e("CheckBox", ch.getText().toString());
+                            }
+                        }
+
+                    }
+                }
+                if(contArr > 0){
+                    Boolean cheked = cb_bra.isChecked() == true || cb_chi.isChecked() == true
+                            || cb_col.isChecked() == true || cb_china.isChecked() == true
+                            || cb_euro.isChecked() == true || cb_jap.isChecked() == true
+                            || cb_mex.isChecked() == true || cb_usa.isChecked() == true;
+                    if(cheked){
+                        Intent i = new Intent(ActivityThree.this, MapsActivity.class);
+                        i.putExtra("Monedas",arrMoney);
+                        startActivity(i);
+                    }
+                    Log.e("ok","Ok");
+                }
+
+
             }
         });
     }
